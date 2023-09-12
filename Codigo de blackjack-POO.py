@@ -237,6 +237,7 @@ class Blackjack:
             print(f"El mazo de la mano vale {valor_mano_jugador} y el mazo de la casa vale {valor_mano_casa}, por ende, el jugador gana la ronda.")
             self.jugador.agregar_fichas(self.apuesta_actual)
         elif self.casa_gano():
+            self.jugador.mano.calcular_valor()
             print(f"El mazo de la mano vale {valor_mano_jugador} y el mazo de la casa vale {valor_mano_casa}, por ende, la casa gana la ronda.")
             self.jugador.fichas -= self.apuesta_actual
         else:
